@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입</title>
+    <link rel="stylesheet" href="./layout_design.css" />
+    <script src="./regist.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class mini>
+        <main>
+          <h1>회원 가입</h1>
+          <!--post와 get의 차이-->
+          <!-- url에 내가 입력한 데이터가 노출되면 get 노출 안되면 post -->
+          <form
+            action="./regist"
+            method="post"
+            name="regform"
+            id="regform"
+            onsubmit="return sendit()"
+          >
+            <div class="form-group">
+              <label for="userid">아이디</label>
+              <input
+                type="text"
+                maxlength="20"
+                name="userid"
+                id="userid"
+                pattern="[A-Za-z0-9]+"
+                title="영문과 숫자만 사용해주세요"
+                placeholder="아이디를 입력하세요"
+              />
+            </div>
+            <div class="form-group">
+              <label for="userpw">비밀번호</label>
+              <input
+                type="password"
+                maxlength="20"
+                name="userpw"
+                id="userpw"
+                pattern="[A-Za-z0-9]+[!@#$%^&*]"
+                title="영문과 숫자 특수문자를 한개 이상씩 사용해주세요"
+                placeholder="비밀번호를 입력하세요"
+              />
+            </div>
+            <div class="form-group">
+              <label for="userpw">비밀번호확인</label>
+              <input
+                type="password"
+                maxlength="20"
+                name="userpw_re"
+                id="userpw_re"
+                pattern="[A-Za-z0-9]+[!@#$%^&*]"
+                title="영문과 숫자 특수문자를 한개 이상씩 사용해주세요"
+                placeholder="비밀번호를 다시입력하세요"
+              />
+            </div>
+            <div class="form-group">
+              <label for="name">이름</label>
+              <!-- tel은 숫자 키패드 불러와짐. 모바일 기준-->
+              <input
+                type="text"
+                maxlength="13"
+                name="name"
+                id="name"
+                pattern="[가-힣]+"
+                placeholder="이름을 입력하세요"
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">이메일</label>
+              <input
+                type="email"
+                maxlength="50"
+                name="email"
+                id="email"
+                pattern="[A-Za-z0-9]+[@-]"
+                placeholder="이메일을 입력하세요"
+              />
+            </div>
+            <div class="form-group">
+              <label for="hp">연락처</label>
+              <!-- tel은 숫자 키패드 불러와짐. 모바일 기준-->
+              <input
+                type="tel"
+                maxlength="13"
+                name="hp"
+                id="hp"
+                pattern="[0-9]+[-]"
+                placeholder="010-0000-0000"
+              />
+            </div>
+            <div class="form-group">
+              <label for="userbr">생년월일</label>
+              <input type="date" name="userbr" id="userbr" />
+            </div>
+            <div class="form-group">
+              <!--남성을 선택하면 서버에는 남이라는 값이 여성은 여라는 값이 넘어간다-->
+              성별
+              <label
+                >남성<input
+                  type="radio"
+                  id="male"
+                  name="gender"
+                  value="남"
+                  checked
+              /></label>
+              <label
+                >여성<input type="radio" id="female" name="gender" value="여"
+              /></label>
+              <!-- label 처리해주면 글자를 눌러도 선택됨 -->
+            </div>
+
+            <div class="form-group inline">
+              <label for="color">좋아하는 색상</label>
+              <input type="color" name="color" id="color" value="#ff0000" />
+            </div>
+
+            <div class="form-group">
+              <label for="region">거주 지역</label>
+              <select name="region" id="region">
+                <option value="">-- 선택하세요 --</option>
+                <option value="서울">서울</option>
+                <option value="대전">대전</option>
+                <option value="부산">부산</option>
+                <option value="강원도">강원도</option>
+                <option value="대전">대전</option>
+                <option value="인천">인천</option>
+                <option value="경기도">경기도</option>
+                <option value="전라도">전라도</option>
+                <option value="경상도">경상도</option>
+                <option value="제주도">제주도</option>
+              </select>
+            </div>
+
+            <fieldset>
+              <legend>관심분야</legend>
+
+              <label for="html">html</label>
+              <input type="checkbox" id="html" name="interest" value="html" />
+
+              <label for="css">css</label>
+              <input type="checkbox" id="css" name="interest" value="css" />
+
+              <label for="javasc">javasc</label>
+              <input
+                type="checkbox"
+                id="javasc"
+                name="interest"
+                value="javasc"
+              />
+
+              <label for="python">python</label>
+              <input
+                type="checkbox"
+                id="python"
+                name="interest"
+                value="python"
+              />
+
+              <label for="java">java</label>
+              <input type="checkbox" id="java" name="interest" value="java" />
+            </fieldset>
+
+            <fieldset>
+              <legend>취미</legend>
+
+              <label for="rb">독서</label>
+              <input type="checkbox" id="rb" name="interest" value="rb" />
+
+              <label for="tr">여행</label>
+              <input type="checkbox" id="tr" name="interest" value="tr" />
+
+              <label for="cook">요리</label>
+              <input type="checkbox" id="cook" name="interest" value="cook" />
+
+              <label for="craft">제작</label>
+              <input type="checkbox" id="craft" name="interest" value="craft" />
+
+              <label for="art">그림</label>
+              <input type="checkbox" id="art" name="interest" value="art" />
+            </fieldset>
+
+            <div class="form-group">
+              <label for="intro">자기소개</label>
+              <textarea
+                name="intro"
+                id="intro"
+                placeholder="간단한 자기소개를 작성해주세요"
+              ></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="file">프로필 사진 업로드</label>
+              <input type="file" id="file" name="file" />
+            </div>
+
+            <button type="submit">가입하기</button>
+
+            <p class="footer-text">
+              이미 계정이 있으신가요? <a href="./login.html">로그인</a>
+            </p>
+          </form>
+          <button2 type="submit">도움말</button2>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>비밀번호 재설정</title>
+    <link rel="stylesheet" href="./layout_design.css" />
+  </head>
+  <body>
+    <div class="container">
+      <main>
+        <h1>기능은 없습니다</h1>
+        <!--post와 get의 차이-->
+        <!-- url에 내가 입력한 데이터가 노출되면 get 노출 안되면 post -->
+        <form action="/login" method="post">
+          <div class="form-group">
+            <label for="userid">이메일</label>
+            <input
+              type="text"
+              maxlength="20"
+              name="userem"
+              id="userem"
+              pattern="[A-Za-z0-9]+"
+              title="영문과 숫자만 사용해주세요"
+              placeholder="이메일을 입력하세요"
+            />
+          </div>
+          <div class="form-group">
+            <label for="userpn">전화번호</label>
+            <input
+              type="tel"
+              maxlength="20"
+              name="userpn"
+              id="userpn"
+              placeholder="전화번호를 입력하세요"
+            />
+          </div>
+          <button type="submit">인증하기</button>
+          <div class="absolute-box">
+            <a href="./login.html">로그인페이지로 이동</a>
+          </div>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>

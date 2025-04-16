@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인</title>
+    <link rel="stylesheet" href="./layout_design.css" />
+  </head>
+  <body>
+    <div class="container">
+      <main>
+        <h1>로그인</h1>
+        <!--post와 get의 차이-->
+        <!-- url에 내가 입력한 데이터가 노출되면 get 노출 안되면 post -->
+        <form action="/login" method="post">
+          <div class="form-group">
+            <label for="userid">이메일</label>
+            <input
+              type="text"
+              maxlength="20"
+              name="userem"
+              id="userem"
+              pattern="[A-Za-z0-9]+"
+              title="영문과 숫자만 사용해주세요"
+              placeholder="이메일을 입력하세요"
+            />
+          </div>
+          <div class="form-group">
+            <label for="userpw">비밀번호</label>
+            <input
+              type="password"
+              maxlength="20"
+              name="userpw"
+              id="userpw"
+              placeholder="비밀번호를 입력하세요"
+            />
+          </div>
+          <fieldset2>
+            <!-- <legend>이메일기억하기</legend> -->
+
+            <label for="email-remember">이메일기억하기</label>
+            <input
+              type="checkbox"
+              id="email-remember"
+              name="interest"
+              value="email-remember"
+            />
+          </fieldset2>
+          <button type="submit">로그인</button>
+        </form>
+      </main>
+      <div class="absolute-box">
+        <button type="submit" class="cus-button">이메일을 잊으셨나요?</button>
+      </div>
+    </div>
+  </body>
+</html>

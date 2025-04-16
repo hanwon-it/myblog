@@ -1,0 +1,293 @@
+@font-face {
+  font-family: "LeeSeoyun";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/LeeSeoyun.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "LeeSeoyun";
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: url(./italy.jpg) no-repeat fixed center/cover;
+}
+
+body {
+  /* background-color: #f2f2f2; */
+  padding: 40px;
+  font-family: "LeeSeoyun";
+  line-height: 1.5;
+}
+
+header,
+nav,
+main,
+section,
+article,
+aside,
+footer {
+  padding: 20px;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+}
+
+nav {
+  background-color: #555;
+  color: white;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: center; /*가운데 정렬*/
+  gap: 50px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* main {
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  background-color: wheat;
+} */
+
+section {
+  background-color: lightblue;
+  padding: 20px;
+  border-radius: 6px;
+  flex: 3;
+}
+
+article {
+  margin-bottom: 20px; /* 아래쪽 여백 맞추기*/
+}
+
+article h2 {
+  margin-bottom: 10px;
+}
+
+aside {
+  background-color: ghostwhite;
+  top: 20px;
+  right: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  float: 1;
+}
+
+aside2 {
+  position: absolute;
+  background-color: ghostwhite;
+  top: 20px;
+  right: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  float: 1;
+}
+
+footer {
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+  position: fixed;
+  bottom: 0; /* 위쪽 여백 맞추기 */
+}
+
+.layout {
+  display: grid;
+  grid-template-areas:
+    "persenal hakruk"
+    "sogae skill"
+    "last last";
+
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 90px 0.2fr 90px;
+  height: 100vh; /* 100%라는 뜻 */
+  gap: 100px;
+}
+
+.persenal {
+  grid-area: persenal;
+}
+
+.hakruk {
+  grid-area: hakruk;
+}
+
+.sogae {
+  grid-area: sogae;
+}
+
+.skill {
+  grid-area: skill;
+}
+
+.last {
+  grid-area: last;
+}
+
+main {
+  max-width: 1000px;
+  margin: auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+main1 {
+  display: flex;
+  align-items: center;
+}
+
+main2 {
+  position: relative;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input,
+select,
+textarea,
+button {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 5px;
+}
+
+.form-group.inline {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+input[type="color"] {
+  width: 50px;
+  height: 40px;
+  padding: 0;
+  border: none;
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+fieldset2 {
+  /* border: 1px solid #ccc; */
+  padding: 1px;
+}
+
+legend {
+  font-weight: bold;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+button[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  /*마우스 올리면 잔잔하게 색변경*/
+  transition: background-color 0.3s ease;
+}
+
+button2[type="submit"] {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  padding: 10px 50px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+  background-color: #4caf50;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+button2[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.footer-text {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 20px;
+  color: #777;
+}
+
+.absolute-box {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 50px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.container {
+  position: relative;
+  margin: 0px auto;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.cus-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
